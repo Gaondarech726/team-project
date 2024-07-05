@@ -1,11 +1,10 @@
 {
-  "name": "goiteens-mini-project-main",
+  "name": "team-project",
   "version": "1.0.0",
   "description": "",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/",
-    "serve": "json-server --watch ./src/scripts/db.json"
+    "build": "parcel build src/*.html --public-url /parcel-project-template/"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +12,6 @@
   "bugs": {},
   "dependencies": {
     "handlebars": "^4.7.8",
-    "json-server": "^1.0.0-beta.1",
     "modern-normalize": "^1.1.0"
   },
   "devDependencies": {

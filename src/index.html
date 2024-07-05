@@ -14,30 +14,9 @@
     />
   </head>
   <body class="container">
-    <h1 class="text-primary-emphasis">Блог</h1>
-
-    <form id="createPostForm">
-      <h3 class="text-primary">Створити новий пост</h3>
-      <input
-        type="text"
-        name="title"
-        id="titleInput"
-        placeholder="Заголовок"
-        required
-      />
-
-      <textarea
-        id="contentInput"
-        name="content"
-        placeholder="Зміст"
-        required
-      ></textarea>
-
-      <button type="submit" class="btn btn-primary">Створити пост</button>
-    </form>
-
-    <div id="postsContainer"></div>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <!-- <include src="./partials/example.html"></include> -->
+    <include src="./partials/header.html"></include>
+    <include src="./partials/main.html"></include>
+    <include src="./partials/footer.html"></include>
+    <!-- <include src="./partials/modal.html"></include> -->
   </body>
 </html>
