@@ -1,0 +1,124 @@
+.modal-window {
+  position: relative;
+  width: 942px;
+  height: 1023px;
+  margin: 0 auto;
+
+  background: #fff2fd;
+  border-radius: 300px 0px;
+
+  .main {
+    .banner-ellipse {
+      position: absolute;
+      width: 132px;
+      height: 132px;
+      top: 62px;
+      left: 444px;
+    }
+
+    .banner {
+      position: absolute;
+      width: 360px;
+      height: 641px;
+      left: 30px;
+      top: 235px;
+    }
+  }
+
+  .info {
+    position: absolute;
+    width: 492px;
+    height: 641px;
+    left: 450px;
+    top: 235px;
+    li {
+      position: relative;
+      list-style-type: none;
+      h2 {
+        position: absolute;
+        width: 63px;
+        height: 29px;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+
+        color: #dc56c5;
+      }
+      p {
+        position: absolute;
+        width: 450px;
+        height: 66px;
+        top: 30px;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+
+        color: #0e0e0e;
+      }
+    }
+    li:nth-child(2n) {
+      top: 110px;
+    }
+    li:nth-child(3n) {
+      top: 210px;
+    }
+    li:nth-child(4n) {
+      top: 310px;
+    }
+    li:nth-child(5n) {
+      top: 410px;
+      p {
+        left: 46px;
+      }
+      .qr {
+        position: absolute;
+        top: 30px;
+      }
+    }
+    .vip-ticket {
+      position: absolute;
+      top: 120px;
+    }
+    .btn-buy {
+      position: absolute;
+      width: 145px;
+      height: 40px;
+      top: 70px;
+      background: #4c00fe;
+      color: #ffffff;
+      border-radius: 5px;
+      border: transparent;
+    }
+  }
+
+  .close {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 875px;
+    top: 30px;
+  }
+}
+.about-author {
+  width: 255px;
+  height: 40px;
+  color: #4c00fe;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  position: absolute;
+  top: 912px;
+  left: 337px;
+  background-color: #fff2fd;
+  box-sizing: border-box;
+  border: 1px solid #4c00fe;
+  border-radius: 5px;
+}
