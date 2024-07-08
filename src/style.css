@@ -1,0 +1,47 @@
+.header_img {
+  position: absolute;
+  right: 0px;
+  top: 0;
+  width: 1400px;
+}
+
+.header_div {
+  width: 1400px;
+}
+
+.header_logo {
+  position: relative;
+  right: 150px;
+  top: 0;
+ color: rgba(212, 212, 212, 0.585);
+}
+
+.header_input {
+  position: relative;
+  left: 350px;
+  bottom: 70px;
+
+  border-radius: 250px;
+  background: #ffffff79;
+}
+
+.header_country {
+  position: relative;
+  left: 400px;
+  bottom: 70px;
+
+  border-radius: 250px;
+  background: #ffffff79;
+}
+
+.h1 {
+  position: relative;
+  bottom: 180px;
+  left: 300px;
+  width: 550px;
+  color: #dc56c5;
+  font-size: 50px;
+  line-height: 60.95px;
+}
+
+
