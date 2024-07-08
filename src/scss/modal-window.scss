@@ -1,8 +1,10 @@
 .modal-window {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 28%;
+  z-index: 999;
   width: 942px;
   height: 1023px;
-  margin: 0 auto;
 
   background: #fff2fd;
   border-radius: 300px 0px;
@@ -94,6 +96,7 @@
       color: #ffffff;
       border-radius: 5px;
       border: transparent;
+      font-size: 16px;
     }
   }
 
