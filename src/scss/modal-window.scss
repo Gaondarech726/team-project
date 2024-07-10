@@ -1,10 +1,9 @@
 .modal-window {
-  position: absolute;
-  top: 0;
-  left: 28%;
-  z-index: 999;
+  top: 201px;
+  position: relative;
   width: 942px;
   height: 1023px;
+  margin: 0 auto;
 
   background: #fff2fd;
   border-radius: 300px 0px;
@@ -75,16 +74,22 @@
     }
     li:nth-child(5n) {
       top: 410px;
-      p {
-        left: 46px;
-      }
       .qr {
         position: absolute;
         top: 30px;
       }
     }
+    .default-ticket {
+      position: absolute;
+      p {
+        left: 46px;
+      }
+    }
     .vip-ticket {
       position: absolute;
+      p {
+        left: 46px;
+      }
       top: 120px;
     }
     .btn-buy {
@@ -92,11 +97,11 @@
       width: 145px;
       height: 40px;
       top: 70px;
+      font-family: 'Montserrat';
       background: #4c00fe;
       color: #ffffff;
       border-radius: 5px;
       border: transparent;
-      font-size: 16px;
     }
   }
 
@@ -124,4 +129,167 @@
   box-sizing: border-box;
   border: 1px solid #4c00fe;
   border-radius: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+  .modal-window {
+    top: 161px;
+    width: 595px;
+    height: 831px;
+
+    .main {
+      .banner-ellipse {
+        width: 70px;
+        height: 70px;
+        left: 263px;
+        top: 26px;
+      }
+
+      .banner {
+        width: 233px;
+        height: 416px;
+        top: 131px;
+        left: 56px;
+      }
+    }
+
+    .info {
+      width: 280px;
+      height: 551px;
+      left: 313px;
+      top: 131px;
+      li {
+        p {
+          width: 265px;
+        }
+      }
+      li:nth-child(2n) {
+        top: 170px;
+      }
+      li:nth-child(3n) {
+        top: 250px;
+      }
+      li:nth-child(4n) {
+        top: 330px;
+      }
+      li:nth-child(5n) {
+        top: 400px;
+      }
+      .vip-ticket {
+        top: 90px;
+      }
+    }
+
+    .close {
+      left: 550px;
+      top: 25px;
+    }
+  }
+  .about-author {
+    width: 255px;
+    height: 40px;
+
+    left: 170px;
+    top: 745px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal-window {
+    width: 272px;
+    height: 915px;
+    top: 414px;
+    background: #fff2fd;
+    border-radius: 150px 0px;
+    .main {
+      .banner-ellipse {
+        width: 102px;
+        height: 102px;
+        left: 86px;
+        top: 75px;
+      }
+
+      .banner {
+        display: none;
+      }
+    }
+
+    .info {
+      top: 185px;
+      left: 0;
+      li {
+        text-align: center;
+        width: 270px;
+        h2 {
+          left: 105px;
+          text-align: center;
+        }
+      }
+      li:nth-child(2n) {
+        top: 170px;
+        h2 {
+          left: 96px;
+        }
+      }
+      li:nth-child(3n) {
+        top: 260px;
+        h2 {
+          left: 90px;
+        }
+      }
+      li:nth-child(4n) {
+        top: 350px;
+        h2 {
+          left: 105px;
+          text-align: center;
+        }
+      }
+      li:nth-child(5n) {
+        top: 410px;
+        h2 {
+          left: 90px;
+        }
+      }
+      .default-ticket {
+        width: 221px;
+        height: 70px;
+        left: -48px;
+        top: 10px;
+        p {
+          left: 70px;
+        }
+        .qr {
+          left: 60px;
+        }
+      }
+      .vip-ticket {
+        top: 90px;
+        p {
+          left: 10px;
+        }
+        .qr {
+          left: 20px;
+        }
+        .btn-buy {
+          left: 61px;
+        }
+      }
+      .btn-buy {
+        top: 56px;
+      }
+    }
+
+    .close {
+      width: 17px;
+      height: 17px;
+      left: 230px;
+      top: 25px;
+    }
+  }
+  .about-author {
+    width: 240px;
+    height: 40px;
+    left: 14px;
+    top: 795px;
+  }
 }
