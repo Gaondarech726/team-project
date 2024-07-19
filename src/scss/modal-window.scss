@@ -1,9 +1,44 @@
+.backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #200d1d;
+  z-index: 998;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  animation: opacityBackdrop 1s forwards;
+  overflow-y: auto;
+}
+@keyframes opacityBackdrop {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
 .modal-window {
-  top: 201px;
-  position: relative;
+  display: none;
+  position: absolute;
+  left: 18%;
+  top: 0;
   width: 942px;
   height: 1023px;
   margin: 0 auto;
+  z-index: 5000;
+  transform: scale(0.5);
+  animation: fadeInScale 1s forwards;
+
+  @keyframes fadeInScale {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
 
   background: #fff2fd;
   border-radius: 300px 0px;
@@ -198,9 +233,11 @@
   .modal-window {
     width: 272px;
     height: 915px;
-    top: 414px;
+    top: 6px;
+    left: 65px;
     background: #fff2fd;
     border-radius: 150px 0px;
+    max-height: 100vh;
     .main {
       .banner-ellipse {
         width: 102px;
