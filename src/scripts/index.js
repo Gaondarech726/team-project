@@ -1,72 +1,69 @@
-// import postTemplate from '../templates/posts.hbs';
-// import postsAPI from './postsAPI.js';
+import ticketTemplate from '../templates/tickets.hbs';
+import TicketsApi from './ticketsAPI.js';
 
-// const containerPost = document.querySelector('#postsContainer');
+// pagination + display cards
+async function CardsPagination() {
+  let ticketsData = await TicketsApi.getRandom();
+  ticketsData = ticketsData._embedded.events;
+  let currentPage = 1;
+  let rows = 20;
 
-// function renderPosts(posts) {
-//   const html = postTemplate({
-//     post: posts,
-//   });
-//   containerPost.innerHTML = html;
-// }
+  function displayList(arrData, rowPerPage, page) {
+    const containerPost = document.querySelector('#cardsContainer');
+    containerPost.innerHTML = '';
+    page--;
 
-// async function getPosts() {
-//   try {
-//     const posts = await postsAPI.getAllPosts();
-//     return posts;
-//   } catch (e) {
-//     containerPost.innerHTML = 'Помилка';
-//     console.error('getAllPosts', e);
-//   }
-// }
+    const start = rowPerPage * page;
+    const end = start + rowPerPage;
+    const paginatedData = arrData.slice(start, end);
 
-// function submitHandler(event) {
-//   console.log(event);
-//   event.preventDefault;
-//   if (event.target.id === 'createPostForm') {
-//     createNewPost(event.target);
-//   }
-// }
+    const html = ticketTemplate({
+      ticket: paginatedData,
+    });
+    containerPost.innerHTML = html;
+  }
 
-// function clickHandler(event) {
-//   console.log(event);
-//   if (event.target.closest('.deletePostButton')) {
-//     const id = event.target.dataset.id;
-//     console.log(id);
+  function displayPagination(arrData, rowPerPage) {
+    const paginationEl = document.querySelector('.pagination');
+    paginationEl.innerHTML = '';
 
-//     deletePostId(id);
-//   }
-// }
+    const pagesCount = Math.ceil(arrData.length / rowPerPage);
+    const ulEl = document.createElement('ul');
+    ulEl.classList.add('pagination__list');
 
-// async function updatePostLists() {
-//   const posts = await getPosts();
-//   renderPosts(posts);
-// }
+    for (let i = 0; i < pagesCount; i++) {
+      const liEl = displayPaginationBtn(i + 1);
+      ulEl.appendChild(liEl);
+    }
+    paginationEl.appendChild(ulEl);
+  }
 
-// async function deletePostId(id) {
-//   await postsAPI.deletePost(id);
+  function displayPaginationBtn(page) {
+    const liEl = document.createElement('li');
+    liEl.classList.add('pagination__item');
+    liEl.innerText = page;
 
-//   await updatePostLists();
-// }
+    if (currentPage === page) liEl.classList.add('pagination__item--active');
 
-// async function createNewPost(form) {
-//   //отримати данні
-//   const title = form.title.value;
-//   const content = form.content.value;
+    liEl.addEventListener('click', () => {
+      currentPage = page;
+      displayList(ticketsData, rows, currentPage);
 
-//   //передати данні в API
-//   postsAPI.addPost({ title, content });
-//   await updatePostLists();
-// }
+      const currentItemLi = document.querySelector(
+        'li.pagination__item--active'
+      );
+      if (currentItemLi) {
+        currentItemLi.classList.remove('pagination__item--active');
+      }
 
-// async function startApp() {
-//   const posts = await getPosts();
+      liEl.classList.add('pagination__item--active');
+    });
 
-//   await renderPosts(posts);
-// }
+    return liEl;
+  }
 
-// startApp();
+  displayList(ticketsData, rows, currentPage);
+  displayPagination(ticketsData, rows);
+}
 
-// document.addEventListener('submit', submitHandler);
-
-// document.addEventListener('click', clickHandler);
+CardsPagination();
