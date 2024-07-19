@@ -1,0 +1,10 @@
+{{#each ticket}}
+  <div class='event'>
+    <div class='cardBorder'></div>
+    <img src='{{images.4.url}}' alt='' class='eventImg' />
+
+    <h3 class='eventName'>{{name}}</h3>
+    <p class='eventTime'>{{dates.start.localDate}}</p>
+    <p class='eventLocation'>{{_embedded.venues.0.markets.0.name}}</p>
+  </div>
+{{/each}}
