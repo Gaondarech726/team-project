@@ -1,10 +1,20 @@
 {{#each ticket}}
   <div class='event'>
     <div class='cardBorder'></div>
-    <img src='{{images.4.url}}' alt='' class='eventImg' />
+
+    <div
+      class='imageContainer'
+      style="background: url('{{images.0.url}}'); background-repeat:no-repeat; background-size: cover; background-position: center"
+    >
+    </div>
 
     <h3 class='eventName'>{{name}}</h3>
     <p class='eventTime'>{{dates.start.localDate}}</p>
-    <p class='eventLocation'>{{_embedded.venues.0.markets.0.name}}</p>
+
+    <div class='locationContainer'>
+      <i class='fa fa-map-marker text-white locationSvg' aria-hidden='true'></i>
+      <p class='eventLocation'>{{_embedded.venues.0.markets.0.name}}</p>
+    </div>
+
   </div>
 {{/each}}
