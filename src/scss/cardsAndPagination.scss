@@ -1,0 +1,146 @@
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pagination {
+  margin: 90px auto 0 auto;
+  width: 300px;
+  height: 30px;
+  list-style: none;
+
+  color: #ffffff;
+  justify-content: space-between;
+
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.5px;
+  text-align: center;
+
+  .pagination__item {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+  }
+
+  .pagination__item--active {
+    color: #dc56c5;
+  }
+
+  .pagination__item:hover {
+    color: #dc56c5;
+    border-radius: 10px 0px 10px 0px;
+    border: 1px solid #dc56c5;
+  }
+
+  .pagination__list {
+    display: flex;
+  }
+}
+
+#cardsContainer {
+  margin: 133px auto 0 auto;
+  max-width: 946px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 70px;
+  justify-content: center;
+
+  .event:hover {
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.1);
+  }
+
+  .event:hover .cardBorder {
+    transition: transform 0.5s ease-in-out;
+    transform: rotate(0.5turn);
+  }
+
+  .event {
+    width: 180px;
+    height: 299px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-direction: column;
+
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+    animation: scaleIn 0.5s ease-out;
+
+    .cardBorder {
+      width: 153px;
+      height: 143px;
+      border: 1px solid #dc56c5;
+      opacity: 0.3;
+      border-radius: 50px 0 50px 0;
+
+      position: absolute;
+      left: 41px;
+      top: -13px;
+
+      z-index: -1;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .imageContainer {
+      width: 180px;
+      height: 227px;
+
+      border-radius: 50px 0px 50px 0px;
+      overflow: hidden;
+    }
+
+    .eventName {
+      color: #dc56c5;
+
+      font-family: Montserrat;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 19.5px;
+      text-align: center;
+    }
+
+    .eventTime {
+      font-family: Montserrat;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19.5px;
+      text-align: center;
+
+      color: #ffffff;
+    }
+
+    .locationContainer {
+      width: 130%;
+      text-align: center;
+      .locationSvg {
+        height: 10px;
+      }
+
+      .eventLocation {
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 17.07px;
+        text-align: left;
+        color: #ffffff;
+        text-align: center;
+        display: inline;
+      }
+    }
+  }
+}
