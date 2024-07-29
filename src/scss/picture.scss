@@ -1,0 +1,79 @@
+.pEuro, .pAtlas, .pLp, .MonP {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.5px;
+    text-align: center;
+    color: #DC56C5;
+}
+
+.pDate1, .pDate2, .p-Date3, .pDate4 {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.5px;
+    text-align: center;
+    background: #FFFFFF;
+}
+
+.aEuro, .Vd2, .aUkr, .aVd4 {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17.07px;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+main > div {
+    text-align: center;
+}
+
+main img {
+    width: 180px;
+    height: 227px;
+    border-radius: 50px 0px 50px 0px;
+}
+
+.pEuro, .pDate1, .aEuro, .pAtlas, .pDate2, .Vd2, .pLp, .p-Date3, .aUkr, .MonP, .pDate4, .aVd4 {
+    margin: 10px 0;
+}
+
+
+//   1
+
+/* Стили для планшетов */
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    main img {
+        width: 160px;
+        height: 200px;
+    }
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 320px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    main img {
+        width: 100%;
+        height: auto;
+    }
+
+    .pEuro, .pAtlas, .pLp, .MonP, .pDate1, .pDate2, .p-Date3, .pDate4, .aEuro, .Vd2, .aUkr, .aVd4 {
+        font-size: 14px;
+    }
+}
+
