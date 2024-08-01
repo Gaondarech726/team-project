@@ -1,5 +1,4 @@
 .backdrop {
-  display: none;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -22,7 +21,6 @@
   }
 }
 .modal-window {
-  display: none;
   position: absolute;
   left: 18%;
   top: 0;
@@ -146,6 +144,8 @@
     height: 25px;
     left: 875px;
     top: 30px;
+    background: url('../img/close.svg') no-repeat center;
+    background-size: cover;
   }
 }
 .about-author {

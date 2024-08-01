@@ -1,0 +1,126 @@
+{{#with modal}}
+  <div class='backdrop modal-close' data-id='{{id}}'></div>
+  <div class='modal-window'>
+    <div class='close modal-close'></div>
+
+    <div class='main'>
+      <img src='{{topImg}}' alt='banner ellipse' class='banner-ellipse' />
+
+      <img src='{{banner}}' alt='banner' class='banner' />
+
+      <ul class='info'>
+        <li>
+          <h2>INFO</h2>
+          <p>
+            {{info}}
+          </p>
+        </li>
+        <li>
+          <h2>WHEN</h2>
+          <p>
+            {{date}}
+          </p>
+        </li>
+        <li>
+          <h2>WHERE</h2>
+          <p>
+            {{where}}
+          </p>
+        </li>
+        <li>
+          <h2>WHO</h2>
+          <p>{{who}}</p>
+        </li>
+        <li>
+          <h2>PRICES</h2>
+
+          <div class='default-ticket'>
+            <svg
+              width='29'
+              height='21'
+              viewBox='0 0 29 21'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+              class='qr'
+            >
+              <path
+                d='M3.22222 0.833496L0 0.833496L0 20.1668H3.22222L3.22222 0.833496Z'
+                fill='#0E0E0E'
+              />
+              <path
+                d='M11.3266 0.833496L8.10437 0.833496L8.10437 20.1668H11.3266L11.3266 0.833496Z'
+                fill='#0E0E0E'
+              />
+              <path
+                d='M16.2088 0.833496L12.9866 0.833496L12.9866 20.1668H16.2088L16.2088 0.833496Z'
+                fill='#0E0E0E'
+              />
+              <path
+                d='M28.9999 0.833496L24.2154 0.833496L24.2154 20.1668H28.9999L28.9999 0.833496Z'
+                fill='#0E0E0E'
+              />
+              <path
+                d='M6.44449 0.833496L4.8822 0.833496L4.8822 20.1668H6.44449L6.44449 0.833496Z'
+                fill='#0E0E0E'
+              />
+              <path
+                d='M19.3333 0.833496L17.771 0.833496L17.771 20.1668H19.3333L19.3333 0.833496Z'
+                fill='#0E0E0E'
+              />
+              <path
+                d='M22.5555 0.833496L20.9932 0.833496L20.9932 20.1668H22.5555L22.5555 0.833496Z'
+                fill='#0E0E0E'
+              />
+            </svg>
+            <p>{{price1}}</p>
+            <button class='btn-buy'>BUY TICKETS</button>
+          </div>
+          <div class='vip-ticket'>
+            <svg
+              width='29'
+              height='21'
+              viewBox='0 0 29 21'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+              class='qr'
+            >
+              <path
+                d='M3.22222 0.833496L0 0.833496L0 20.1668H3.22222L3.22222 0.833496Z'
+                fill='#0E0E0E'
+              />
+              <path
+                d='M11.3266 0.833496L8.10437 0.833496L8.10437 20.1668H11.3266L11.3266 0.833496Z'
+                fill='#0E0E0E'
+              />
+              <path
+                d='M16.2088 0.833496L12.9866 0.833496L12.9866 20.1668H16.2088L16.2088 0.833496Z'
+                fill='#0E0E0E'
+              />
+              <path
+                d='M28.9999 0.833496L24.2154 0.833496L24.2154 20.1668H28.9999L28.9999 0.833496Z'
+                fill='#0E0E0E'
+              />
+              <path
+                d='M6.44449 0.833496L4.8822 0.833496L4.8822 20.1668H6.44449L6.44449 0.833496Z'
+                fill='#0E0E0E'
+              />
+              <path
+                d='M19.3333 0.833496L17.771 0.833496L17.771 20.1668H19.3333L19.3333 0.833496Z'
+                fill='#0E0E0E'
+              />
+              <path
+                d='M22.5555 0.833496L20.9932 0.833496L20.9932 20.1668H22.5555L22.5555 0.833496Z'
+                fill='#0E0E0E'
+              />
+            </svg>
+
+            <p>{{price2}}</p>
+            <button class='btn-buy'>BUY TICKETS</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <button class='about-author'>MORE FROM THIS AUTHOR</button>
+  </div>
+
+{{/with}}

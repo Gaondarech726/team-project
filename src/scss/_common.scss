@@ -1,1 +1,29 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+body {
+  --text-light: rgba(255, 255, 255, 1);
+  --text-main: rgba(220, 86, 197, 1);
+  --bg-main: rgb(0, 0, 0);
+
+  background-color: var(--bg-main);
+}
+
+// add font family to body
+* {
+  font-family: Montserrat, sans-serif;
+  color: var(--text-light);
+}
+
+.container {
+  width: 946px;
+  max-width: 90%;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    width: 595px;
+  }
+
+  @media (max-width: 320px) {
+    width: 280px;
+  }
+}
