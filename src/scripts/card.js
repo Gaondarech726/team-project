@@ -35,8 +35,8 @@ async function onCardHandler(id) {
 }
 
 async function onClickHandler(e) {
-  if (e.target.closest('.card')) {
-    const card = e.target.closest('.card');
+  if (e.target.closest('.event')) {
+    const card = e.target.closest('.event');
     const id = card.dataset.id;
     onCardHandler(id);
   } else if (e.target.closest('.modal-close')) {

@@ -1,20 +1,16 @@
-{{#each ticket}}
-  <div class='event' data-id="{{id}}">
+{{#each tickets}}
+  <div class='event' data-id='{{id}}'>
     <div class='cardBorder'></div>
-
     <div
       class='imageContainer'
-      style="background: url('{{images.0.url}}'); background-repeat:no-repeat; background-size: cover; background-position: center"
+      style="background: url('{{imageUrl}}'); background-repeat:no-repeat; background-size: cover; background-position: center"
     >
     </div>
-
-    <h3 class='eventName'>{{name}}</h3>
-    <p class='eventTime'>{{dates.start.localDate}}</p>
-
+    <h3 class='eventName'>{{title}}</h3>
+    <p class='eventTime'>{{time}}</p>
     <div class='locationContainer'>
       <i class='fa fa-map-marker text-white locationSvg' aria-hidden='true'></i>
-      <p class='eventLocation'>{{_embedded.venues.0.markets.0.name}}</p>
+      <p class='eventLocation'>{{country}}</p>
     </div>
-
   </div>
 {{/each}}

@@ -1,7 +1,7 @@
 import cardListTemplate from '../templates/tickets.hbs';
 import { eventsService } from './eventsService';
 
-const cardsContainer = document.getElementById('cardsWrapper');
+const cardsContainer = document.getElementById('cardsContainer');
 
 function getPreparedCards(cards) {
   return cards.map(card => {
@@ -19,7 +19,7 @@ export async function renderCardList() {
   const cards = await eventsService.getEvents();
   const prepareCards = getPreparedCards(cards);
   const html = cardListTemplate({
-    cards: prepareCards,
+    tickets: prepareCards,
   });
   cardsContainer.innerHTML = html;
 }

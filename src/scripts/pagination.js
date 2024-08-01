@@ -5,7 +5,7 @@ export function renderPagination() {
   const { totalPages } = eventsService.getPageData();
   $(document).ready(function () {
     const data = Array.from({ length: totalPages }, (_, i) => i);
-    $('#pagination-container').pagination({
+    $('#paginationContainer').pagination({
       dataSource: data,
       autoHidePrevious: true,
       autoHideNext: true,
