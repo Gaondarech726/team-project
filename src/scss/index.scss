@@ -1,16 +1,4 @@
-@import './reset.scss';
-@import './common.scss';
-@import './modal-window.scss';
-@import './cardsAndPagination.scss';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-body {
-  background-color: black;
-}
-
-html,
-body {
-  margin: 0;
-  height: 100%;
-  overflow-y: auto;
-}
+@import url(./reset.scss);
+@import url(./_common.scss);
+@import url(./modal-window.scss);
+@import url(./cardsAndPagination.scss);
