@@ -172,7 +172,7 @@
     border-radius: 5px;
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     .modal-window {
       top: 161px;
       width: 595px;
@@ -235,7 +235,7 @@
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     .modal-window {
       width: 272px;
       height: 915px;
@@ -243,7 +243,6 @@
       left: 65px;
       background: #fff2fd;
       border-radius: 150px 0px;
-      max-height: 100vh;
       .main {
         .banner-ellipse {
           width: 102px;
@@ -269,7 +268,7 @@
           }
         }
         li:nth-child(2n) {
-          top: 170px;
+          top: 200px;
           h2 {
             left: 96px;
           }
