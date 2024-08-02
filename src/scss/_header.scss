@@ -89,6 +89,10 @@ header {
       margin-top: 25px;
     }
 
+    option {
+      color: black;
+    }
+
     input,
     select {
       width: 270px;
@@ -107,7 +111,7 @@ header {
       // set option styles
 
       ::placeholder {
-        color: rgba(200, 200, 200, 1);
+        background-color: rgba(200, 200, 200, 1);
         opacity: 1;
       }
 
@@ -122,8 +126,8 @@ header {
       background-image: url('../img/search.svg');
     }
 
-    select {
-      background-image: url('../img/select.svg');
-    }
+    // select {
+    //   background-image: url('../img/select.svg');
+    // }
   }
 }
